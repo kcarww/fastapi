@@ -1,0 +1,39 @@
+# @name get_cursos
+GET http://localhost:8000/cursos
+
+###
+
+# @name get_cursos_by_id
+GET http://localhost:8000/cursos/3
+
+###
+
+# @name post_cursos
+POST http://localhost:8000/cursos
+Content-Type: application/json
+
+{
+    "id": 3,
+    "titulo": "Python",
+    "aulas": "99",
+    "horas": 49
+}
+
+###
+
+# @name put_cursos
+PUT http://localhost:8000/cursos/3
+Content-Type: application/json
+
+{
+    "id": 3,
+    "titulo": "C#",
+    "aulas": "99",
+    "horas": 50
+}
+
+
+###
+
+# @name delete_cursos
+DELETE http://localhost:8000/cursos/2
