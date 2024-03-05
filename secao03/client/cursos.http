@@ -37,3 +37,8 @@ Content-Type: application/json
 
 # @name delete_cursos
 DELETE http://localhost:8000/cursos/2
+
+###
+
+# @name get_calculadora
+GET http://localhost:8000/calculadora?a=3&b=2
