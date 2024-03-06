@@ -13,8 +13,7 @@ POST http://localhost:8000/cursos
 Content-Type: application/json
 
 {
-    "id": 3,
-    "titulo": "Python",
+    "titulo": "c#",
     "aulas": "99",
     "horas": 49
 }

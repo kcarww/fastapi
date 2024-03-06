@@ -37,11 +37,11 @@ async def getCursoById(curso_id: int):
 
 @app.post('/cursos', status_code=status.HTTP_201_CREATED, response_model=Curso)
 async def createCurso(curso: Curso):
-    if curso.id not in cursos:
-        cursos[curso.id] = curso
-        return cursos[curso.id]
-    else:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Curso já existe")
+    next_id = len(cursos) + 1
+    curso.id = next_id
+    cursos.append(curso)
+    return curso 
+    # raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Curso já existe")
 
 
 @app.put('/cursos/{curso_id}', status_code=status.HTTP_202_ACCEPTED)
