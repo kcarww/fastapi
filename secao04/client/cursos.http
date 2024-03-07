@@ -1,0 +1,38 @@
+# @name get_cursos
+GET http://localhost:8000/api/v1/cursos
+
+###
+
+# @name get_cursos_by_id
+GET http://localhost:8000/api/v1/cursos/1
+
+###
+
+
+
+# @name post_curso
+POST http://localhost:8000/api/v1/cursos
+Content-Type: application/json
+
+{
+    "titulo": "Java",
+    "aulas": 50,
+    "horas": 110
+}
+
+###
+
+# @name put_cursos
+PUT http://localhost:8000/api/v1/cursos/1
+Content-Type: application/json
+
+{
+    "titulo": "C#",
+    "aulas": "99",
+    "horas": 50
+}
+
+###
+
+# @name delete_cursos
+DELETE http://localhost:8000/api/v1/cursos/1
